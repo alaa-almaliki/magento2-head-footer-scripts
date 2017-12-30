@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="head_footer_scripts" sortOrder="100" translate="label">
+            <label>Head Footer Script</label>
+        </tab>
+        <section id="scripts" sortOrder="10"
+                 showInDefault="1"
+                 showInStore="1"
+                 showInWebsite="1"
+                 translate="label">
+            <label>Configurations</label>
+            <tab>head_footer_scripts</tab>
+            <resource>Alaa_HeadFooterScripts::scripts_config</resource>
+            <group id="configs"
+                   sortOrder="10"
+                   showInDefault="1"
+                   showInWebsite="1"
+                   showInStore="1"
+                   translate="label">
+                <label>Configuration</label>
+                <field id="enable"
+                       sortOrder="10"
+                       showInStore="1"
+                       showInWebsite="1"
+                       showInDefault="1"
+                       type="select">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

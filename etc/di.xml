@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Alaa\HeadFooterScripts\Api\ScriptRepositoryInterface"
+                type="Alaa\HeadFooterScripts\Model\ScriptRepository" />
+    <preference for="Alaa\HeadFooterScripts\Api\Data\ScriptInterface"
+                type="Alaa\HeadFooterScripts\Model\Script" />
+    <preference for="Alaa\HeadFooterScripts\Api\Data\ScriptSearchResultInterface"
+                type="Alaa\HeadFooterScripts\Model\ScriptSearchResults" />
+    <preference for="Alaa\HeadFooterScripts\Api\PageRepositoryInterface"
+                type="Alaa\HeadFooterScripts\Model\PageRepository" />
+    <preference for="Alaa\HeadFooterScripts\Api\Data\PageInterface"
+                type="Alaa\HeadFooterScripts\Model\Page" />
+    <preference for="Alaa\HeadFooterScripts\Api\Data\PageSearchResultsInterface"
+                type="Alaa\HeadFooterScripts\Model\PageSearchResults" />
+</config>

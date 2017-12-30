@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceBlock name="head.additional">
+        <block class="Alaa\HeadFooterScripts\Block\Script\Renderer"
+               name="head_scripts"
+               template="Alaa_HeadFooterScripts::head-scripts.phtml"
+               ifconfig="scripts/configs/enable"/>
+    </referenceBlock>
+    <body>
+        <referenceContainer name="before.body.end">
+            <block class="Alaa\HeadFooterScripts\Block\Script\Renderer"
+                   name="footer_scripts"
+                   template="Alaa_HeadFooterScripts::footer-scripts.phtml"
+                   ifconfig="scripts/configs/enable"/>
+        </referenceContainer>
+    </body>
+</page>

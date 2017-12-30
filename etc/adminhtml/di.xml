@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Alaa\HeadFooterScript\Ui\Component\Listing\Column\Store" type="Magento\Store\Ui\Component\Listing\Column\Store">
+        <arguments>
+            <argument name="storeKey" xsi:type="string">stores</argument>
+        </arguments>
+    </virtualType>
+    <type name="Alaa\HeadFooterScripts\Model\ResourceModel\Script">
+        <plugin name="head_footer_script_indexer" type="Alaa\HeadFooterScripts\Plugin\IndexScript" />
+    </type>
+</config>

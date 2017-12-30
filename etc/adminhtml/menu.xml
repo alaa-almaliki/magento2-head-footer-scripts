@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Alaa_HeadFooterScripts::scripts_settings"
+             title="Head Footer Scripts"
+             module="Alaa_HeadFooterScripts"
+             sortOrder="50"
+             resource="Alaa_HeadFooterScripts::scripts_settings" />
+        <add id="Alaa_HeadFooterScripts::scripts_operations"
+             title="Scripts"
+             translate="title"
+             module="Alaa_HeadFooterScripts"
+             sortOrder="10"
+             action="head_footer_scripts/script/index"
+             parent="Alaa_HeadFooterScripts::scripts_settings"
+             resource="Alaa_HeadFooterScripts::scripts_settings"/>
+        <add id="Alaa_HeadFooterScripts::page_operations"
+             title="Pages"
+             translate="title"
+             module="Alaa_HeadFooterScripts"
+             sortOrder="20"
+             action="head_footer_scripts/page/index"
+             parent="Alaa_HeadFooterScripts::scripts_settings"
+             resource="Alaa_HeadFooterScripts::scripts_settings"/>
+    </menu>
+</config>

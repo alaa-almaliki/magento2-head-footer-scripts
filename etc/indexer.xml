@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Indexer/etc/indexer.xsd">
+    <indexer id="head_footer_script" view_id="head_footer_script" class="Alaa\HeadFooterScripts\Model\Indexer\ScriptIndexer">
+        <title translate="true">Head Footer Scripts</title>
+        <description translate="true">Index Script Pages</description>
+    </indexer>
+</config>

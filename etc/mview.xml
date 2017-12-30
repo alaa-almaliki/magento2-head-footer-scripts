@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Mview/etc/mview.xsd">
+    <view id="head_footer_script" class="Alaa\HeadFooterScripts\Model\Indexer\ScriptIndexer" group="indexer">
+        <subscriptions>
+            <table name="head_footer_script" entity_column="script_id" />
+        </subscriptions>
+    </view>
+</config>
