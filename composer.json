@@ -2,7 +2,6 @@
   "name": "alaa/magento2-head-footer-scripts",
   "description": "Magento2 Head Footer Scripts",
   "type": "magento2-module",
-  "version": "0.1.0",
   "license": "MIT",
   "version": "1.0.0",
   "autoload": {
