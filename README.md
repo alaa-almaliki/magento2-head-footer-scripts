@@ -24,6 +24,7 @@ The module is tested on community edition versions 2.1.9, 2.2.0, 2.2.1, and 2.2.
 * Add Scripts from **Admin > Head Footer Scripts > Scripts**
 * Add more pages from **Admin > Head Footer Scripts > Pages**
 * Once a new script is saved, it is indexed by its pages (Layout Handles) and stores
+* Editing existing or saving new scripts will need to flush `block_html` cache to take effect
 * It can be re-indexed by running the command `php bin/magento indexer:reindex head_footer_script`
 
 # Contribution
