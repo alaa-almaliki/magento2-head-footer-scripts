@@ -3,6 +3,7 @@
 namespace Alaa\HeadFooterScripts\Model\Scripts;
 
 use Alaa\HeadFooterScripts\Api\Data\ScriptInterface;
+use Alaa\HeadFooterScripts\Helper\CacheKey;
 use Alaa\HeadFooterScripts\Model\Indexer\ScriptIndexer\Helper;
 use Magento\Framework\App\CacheInterface;
 use Magento\Framework\App\RequestInterface;
@@ -36,22 +37,30 @@ class Renderer
     private $storeManager;
 
     /**
+     * @var CacheKey
+     */
+    private $cacheKey;
+
+    /**
      * Renderer constructor.
      * @param Helper $indexerHelper
      * @param RequestInterface $request
      * @param StoreManagerInterface $storeManager
      * @param CacheInterface $cache
+     * @param CacheKey $cacheKey
      */
     public function __construct(
         Helper $indexerHelper,
         RequestInterface $request,
         StoreManagerInterface $storeManager,
-        CacheInterface $cache)
-    {
+        CacheInterface $cache,
+        CacheKey $cacheKey
+    ) {
         $this->indexerHelper = $indexerHelper;
         $this->request = $request;
         $this->storeManager = $storeManager;
         $this->cache = $cache;
+        $this->cacheKey = $cacheKey;
     }
 
     /**
@@ -61,7 +70,7 @@ class Renderer
     public function render($area)
     {
         $pageHandle = $this->request->getFullActionName();
-        $cacheKey = $pageHandle . '_' . $area . '_' . $this->storeManager->getStore()->getId();
+        $cacheKey = $this->cacheKey->get($pageHandle, $area, $this->storeManager->getStore()->getId());
         $content = unserialize($this->cache->load($cacheKey));
         if (strlen($content) > 0) {
             return $content;
@@ -75,6 +84,7 @@ class Renderer
         if (strlen($content) > 0) {
             $this->cache->save(serialize($content), $cacheKey);
         }
+
         return $content;
     }
 
